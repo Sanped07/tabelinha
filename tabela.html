@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"  id="Estilos">
+    <title>Quadro de funcionários</title>
+</head>
+<body>
+    <header>
+        <h1>Quadro De funcincionários</h1>
+    </header>
+    <body>
+        <h1>Tabela de Orgazização de funcincionários</h1>
+        <table> 
+            <caption>Tabela 1 - Cadastros de funcionários</caption> 
+            <thead> 
+                <tr> 
+                    <th>Nome</th> 
+                    <th>Telefone</th>
+                    <th>E-mail</th>
+                    <th>função</th>
+                    <th>CEP</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td>Bruce Wayne</td> 
+                    <td>(11) 97854-7845</td>
+                    <td>EunsouObatman@batmail.com.br</td>
+                    <td>CEO</td>
+                    <td>08490-013</td>
+                </tr>
+                <tr>
+                    <td>Marge simpson</td>
+                    <td>(78) 99733-5512</td>
+                    <td>marge.HLMB@springfild.inf.com</td>
+                    <td>Cozinheira</td>
+                    <td>69079-250</td>
+                </tr>
+                <tr>
+                    <td>Michael kyle</td>
+                    <td>(66) 98862-9157</td>
+                    <td>maite-aparicio94@transpKyle.com</td>
+                    <td>Entregador</td>
+                    <td>78559-092</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Quantidade Total</td>
+                    <td>3</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button type="button" id="botao">Remover Estilos</button>
+        <script>
+            
+            function trocamodelo(){
+            const Estilo = document.querySelector('#Estilos'); 
+            if(Estilo.hasAttribute('disabled')){
+                Estilo.removeAttribute('disabled');
+                botao.innerHTML = 'Sem estilo'
+
+            }else {
+                Estilo.setAttribute('disabled', '');
+                botao.innerHTML = 'Com estilo'
+            }
+        }
+        
+        const botao = document.querySelector('#botao');
+        botao.addEventListener('click', trocamodelo);    
+    </script>
+        
+    
+          
+    </body>
+    </html>
+</body>
+</html>
